@@ -34,8 +34,8 @@ async def listen():
 
 #COLLECTS THE TWO FUNCTIONS INTO ONE
 async def change_status():
-    yakumo.loop.create_task(watch())
     yakumo.loop.create_task(listen())
+    yakumo.loop.create_task(watch())
 
 
 @yakumo.event
