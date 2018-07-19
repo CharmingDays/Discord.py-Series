@@ -34,14 +34,15 @@ async def listen():
 
 #COLLECTS THE TWO FUNCTIONS INTO ONE
 async def change_status():
-    pass
+    bot.loop.create_task(watch())
+    bot.loop.create_task(listen())
 
 
 @yakumo.event
 async def on_ready():
     print(yakumo.user.name)
     #RUN YOUR BACKGROUND TASK HERE
-
+    bot.loop.create_task(change_status())
 
 
 
