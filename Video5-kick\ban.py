@@ -12,12 +12,13 @@ bot=commands.Bot(command_prefix='y.)
 
 @bot.event
 async def on_ready():
+    print(bot.user.name)
 
 
 
-
-
-
+@bot.command(pass_context=True)
+async def kick(con,user:discord.Member):
+    pass
 
 
 
